@@ -5,20 +5,27 @@ from telegram.constants import ParseMode
 from forwarder import bot, OWNER_ID
 
 PM_START_TEXT = """
-Hey {}, I'm {}!
-I'm a bot used to forward messages from one chat to another.
+<b>Hi 👋🏻 {},
 
-To obtain a list of commands, use /help.
+I'm {} to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
+
+See /help for more Details.
+
+Maintained By :- <a href='tg://user?id={OWNER_ID}'>Karthik</a></b>
 """
 
 PM_HELP_TEXT = """
-Here is a list of usable commands:
- - /start : Starts the bot.
- - /help : Sends you this help message.
+<b>Hi 👋🏻 {},
 
-just send /id in private chat/group/channel and i will reply it's id.
+Here is a list of usable Commands :-
+♦️ /start :- Check if 😊 I'm Alive
+♦️ /forward :- to Request to add Source And Distinction Channels ID (Direct Request to Admin)
+♦️ /help :- This Bot's Features 
+♦️ /about :- to Know About Me 😁
+♦️ /id :- Get Your 🆔
+
+Just Send /id in Private Chat/Group/Channel and i will Reply it's ID.</b>
 """
-
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
