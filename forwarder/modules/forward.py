@@ -1,12 +1,9 @@
 from typing import Union, Optional
-
 from telegram import Update, Message, MessageId
 from telegram.error import ChatMigrated
 from telegram.ext import MessageHandler, filters, ContextTypes
-
 from forwarder import bot, REMOVE_TAG, LOGGER
 from forwarder.utils import get_source, get_destenation, parse_topic
-
 
 async def send_message(
     message: Message, chat_id: int, thread_id: Optional[int] = None
@@ -14,7 +11,6 @@ async def send_message(
     if REMOVE_TAG:
         return await message.copy(chat_id, message_thread_id=thread_id)  # type: ignore
     return await message.forward(chat_id, message_thread_id=thread_id)  # type: ignore
-
 
 async def forwarder(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message
@@ -29,10 +25,10 @@ async def forwarder(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
         except ChatMigrated as err:
             await send_message(message, err.new_chat_id)
             LOGGER.warning(
-                f"Chat {chat} has been migrated to {err.new_chat_id}!! Edit the config file!!"
+                f"Chat {chat} has been Migrated to {err.new_chat_id}!! Edit the Config File!!"
             )
         except Exception as err:
-            LOGGER.warning(f"Failed to forward message from {source.id} to {chat} due to {err}")
+            LOGGER.warning(f"Failed to Forward Message From {source.id} to {chat} Due to {err}")
 
 
 FORWARD_HANDLER = MessageHandler(
