@@ -10,7 +10,7 @@ I'm {} to Maintain Your Channels. I am very useful for the Channel Admin who hav
 
 See /help for more Details.
 
-Maintained By :- [Karthik](https://t.me/TG_Karthik)</b>
+Maintained By :- <a href='https://t.me/TG_Karthik'>Karthik</a></b>
 """
 
 HELP = """
@@ -64,6 +64,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             START.format(user.first_name, context.bot.first_name),
             parse_mode=ParseMode.HTML,
             quote=True,
+            disable_web_page_preview=True,
             reply_markup=reply_markup
         )
     else:
