@@ -1,8 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes, CommandHandler, filters
 from telegram.constants import ParseMode
-from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
-from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from forwarder import bot, OWNER_ID
 
 START = """
