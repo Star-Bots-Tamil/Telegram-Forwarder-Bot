@@ -10,7 +10,7 @@ I'm {} to Maintain Your Channels. I am very useful for the Channel Admin who hav
 
 See /help for more Details.
 
-Maintained By :- <a href='tg://user?id={OWNER_ID}'>Karthik</a></b>
+Maintained By :- [Karthik](https://t.me/TG_Karthik)</b>
 """
 
 HELP = """
