@@ -1,7 +1,8 @@
 from telegram import Update
 from telegram.ext import ContextTypes, CommandHandler, filters
 from telegram.constants import ParseMode
-
+from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
+from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 from forwarder import bot, OWNER_ID
 
 START = """
@@ -50,6 +51,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
     message = update.effective_message
     user = update.effective_user
+    keyboard = [
+        [
+            InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
+            InlineKeyboardButton("Add My Forwards", url="")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     if not (chat and message and user):
         return
 
@@ -57,6 +65,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await message.reply_text(
             START.format(user.first_name, context.bot.first_name),
             parse_mode=ParseMode.HTML,
+            reply_markup=reply_markup
         )
     else:
         await message.reply_text("I'm up and running!")
