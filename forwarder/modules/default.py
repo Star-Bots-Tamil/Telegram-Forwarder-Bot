@@ -14,7 +14,8 @@ Maintained By :- <a href='https://t.me/TG_Karthik'>Karthik</a></b>
 """
 
 GROUP_START = """
-<b>I'm Working Only PM</b>
+<b>Hi 👋🏻 {},
+I'm Working Only on <a href='https://t.me/Star_Auto_Forward_Bot'>Bot PM</a></b>
 """
 
 HELP = """
@@ -61,11 +62,15 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     keyboard1 = [
         [
-            InlineKeyboardButton("Check PM", url="https://t.me/Star_Auto_Forward_Bot"),
+            InlineKeyboardButton("Check Bot PM", url="https://t.me/Star_Auto_Forward_Bot"),
             InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+        ],
+        [
+            InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil")
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
+    reply_markup1 = InlineKeyboardMarkup(keyboard1)
     if not (chat and message and user):
         return
 
@@ -83,7 +88,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             parse_mode=ParseMode.HTML,
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=reply_markup
+            reply_markup=reply_markup1
         )
 
 async def help(update: Update, _):
