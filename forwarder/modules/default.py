@@ -13,6 +13,10 @@ See /help for more Details.
 Maintained By :- <a href='https://t.me/TG_Karthik'>Karthik</a></b>
 """
 
+GROUP_START = """
+<b>I'm Working Only PM</b>
+"""
+
 HELP = """
 <b>Hi 👋🏻 {},
 
@@ -55,6 +59,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
         ]
     ]
+    keyboard1 = [
+        [
+            InlineKeyboardButton("Check PM", url="https://t.me/Star_Auto_Forward_Bot"),
+            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+        ]
+    ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     if not (chat and message and user):
         return
@@ -68,24 +78,50 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=reply_markup
         )
     else:
-        await message.reply_text("I'm up and running!")
-
+        await message.reply_text(
+            GROUP_START.format(user.first_name, context.bot.first_name),
+            parse_mode=ParseMode.HTML,
+            quote=True,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup
+        )
 
 async def help(update: Update, _):
     chat = update.effective_chat
+    user = update.effective_user
     message = update.effective_message
+    keyboard = [
+        [
+            InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
+            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     if not (chat and message):
         return
 
     if not chat.type == "private":
         await message.reply_text("Contact me via PM to get a list of usable commands.")
     else:
-        await message.reply_text(HELP)
+        await message.reply_text(
+            HELP.format(user.first_name, context.bot.first_name),
+            parse_mode=ParseMode.HTML,
+            quote=True,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup
+        )
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
     message = update.effective_message
     user = update.effective_user
+    keyboard = [
+        [
+            InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
+            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     if not (chat and message and user):
         return
 
@@ -101,6 +137,13 @@ async def forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
     message = update.effective_message
     user = update.effective_user
+    keyboard = [
+        [
+            InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
+            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     if not (chat and message and user):
         return
 
