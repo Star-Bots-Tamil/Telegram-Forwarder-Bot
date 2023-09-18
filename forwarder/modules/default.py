@@ -6,7 +6,6 @@ from forwarder import bot, OWNER_ID
 
 START = """
 <b>Hi 👋🏻 {},
-
 I'm {} to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
 
 See /help for more Details.
@@ -64,6 +63,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await message.reply_text(
             START.format(user.first_name, context.bot.first_name),
             parse_mode=ParseMode.HTML,
+            quote=True,
             reply_markup=reply_markup
         )
     else:
