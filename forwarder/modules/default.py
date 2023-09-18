@@ -54,7 +54,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
-            InlineKeyboardButton("Add My Forwards", url="")
+            InlineKeyboardButton("Add My Forwards", callback_data=OWNER_ID)
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
