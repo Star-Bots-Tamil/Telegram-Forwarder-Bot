@@ -160,7 +160,7 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if chat.type == "private":
         await message.reply_text(
-            ABOUT.format(context.bot.first_name, user.mention),
+            ABOUT.format(context.bot.first_name, user.mention_html()),
             parse_mode=ParseMode.HTML,
             quote=True,
             disable_web_page_preview=True,
