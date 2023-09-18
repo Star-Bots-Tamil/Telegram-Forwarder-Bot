@@ -59,13 +59,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ]
     ]
     keyboard1 = [
         [
             InlineKeyboardButton("Check Bot PM", url="https://t.me/Auto_Forward_Star_Bot"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ],
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil")
@@ -100,13 +100,13 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ]
     ]
     keyboard1 = [
         [
             InlineKeyboardButton("Check Bot PM", url="https://t.me/Auto_Forward_Star_Bot"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ],
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil")
@@ -141,13 +141,13 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ]
     ]
     keyboard1 = [
         [
             InlineKeyboardButton("Check Bot PM", url="https://t.me/Auto_Forward_Star_Bot"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ],
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil")
@@ -182,13 +182,13 @@ async def forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ]
     ]
     keyboard1 = [
         [
             InlineKeyboardButton("Check Bot PM", url="https://t.me/Auto_Forward_Star_Bot"),
-            InlineKeyboardButton("Add My Forwards", url="https://t.me/TG_Karthik")
+            InlineKeyboardButton("Add My Channels", url="https://t.me/TG_Karthik")
         ],
         [
             InlineKeyboardButton("Update Channel", url="https://t.me/Star_Bots_Tamil")
