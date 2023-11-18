@@ -49,7 +49,7 @@ ABOUT = """
 
 FORWARD = """
 <b>Hello 👋🏻 {}
-Request You Forward Channels</b>
+Request Your Forward Channels</b>
 """
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
