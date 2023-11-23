@@ -4,8 +4,9 @@ WORKDIR /app
 
 RUN pip install poetry
 RUN poetry config virtualenvs.create false
+ENV PATH="/root/.poetry/bin:$PATH"
 
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml poetry.lock*
 
 RUN poetry install --no-root --only main
 
