@@ -1,10 +1,10 @@
 [
     {
-        "source": -1001822541447,
-        "destination": [-1001871766752]
+        "source": -1001589399161, # For Post Messages Forwarding (@Star_Moviess_Tamil) 
+        "destination": [-1001836455250, -1001867762925, -1001852796609]
     },
     {
-        "source": -10098765432,
+        "source": -1001797626445, # For File Forwarding (Star Movies Database)
         "destination": [-10012345678, "-10012345678#98765"]
     }
 ]
